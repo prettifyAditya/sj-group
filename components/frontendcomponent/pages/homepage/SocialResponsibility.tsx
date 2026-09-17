@@ -54,7 +54,7 @@ export default function SocialResponsibility() {
         <div className="main_wrapper">
           <div className="swiper-nav center-full group secondary">
             <SwiperButton classname="swiper-prev social-prev"></SwiperButton>
-            <SwiperButton classname="swiper-prev social-next"></SwiperButton>
+            <SwiperButton classname="swiper-next social-next"></SwiperButton>
           </div>
           <Swiper
             modules={[Navigation]}

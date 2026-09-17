@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import "@/uploads/sass/component/component.css";
 
 interface ClientLogo {
   imgSrc: string;

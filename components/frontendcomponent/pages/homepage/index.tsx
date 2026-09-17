@@ -8,6 +8,7 @@ import SocialResponsibility from "./SocialResponsibility";
 import IndustryClients from "../../molecules/IndustryClients";
 import Milestone from "../../organisms/Milestone";
 import { number } from "framer-motion";
+import PresenceGlobe from "../../organisms/PresenceGlobe";
 
 const homeClientData = [
   {
@@ -45,6 +46,29 @@ const homeClientData = [
   },
   {
     imgSrc: "/images/other/client6.png",
+  },
+];
+
+const filterData = [
+  {
+    title: "Coal Mining",
+    location: "73, New Baradwari, Jamshedpur, Jharkhand 831001",
+  },
+  {
+    title: "Coal Mining",
+    location: "73, New Baradwari, Jamshedpur, Jharkhand 831001",
+  },
+  {
+    title: "Coal Mining",
+    location: "73, New Baradwari, Jamshedpur, Jharkhand 831001",
+  },
+  {
+    title: "Coal Mining",
+    location: "73, New Baradwari, Jamshedpur, Jharkhand 831001",
+  },
+  {
+    title: "Coal Mining",
+    location: "73, New Baradwari, Jamshedpur, Jharkhand 831001",
   },
 ];
 
@@ -126,6 +150,12 @@ export default function HomePage() {
         }
       />
       <InsightSec />
+      <PresenceGlobe
+        heading="Presence Across India"
+        title="Search Projects"
+        filter={true}
+        filterData={filterData}
+      />
       <EngineeringDelivers />
       <Milestone milestoneData={milestoneData} />
       <DirectorMessage />

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Button from "../atoms/Button";
+import "@/uploads/sass/component/component.css";
 
 interface AboutDescriptionProps {
   classname?: string;

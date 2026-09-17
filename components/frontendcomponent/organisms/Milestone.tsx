@@ -1,6 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "@/uploads/sass/component/component.css";
 
 interface milestone {
   img: string;

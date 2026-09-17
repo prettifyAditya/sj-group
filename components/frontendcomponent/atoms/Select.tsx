@@ -16,6 +16,7 @@ interface SelectChangeEvent {
 
 interface SelectProps {
   classname?: string;
+  hasIcon: boolean;
   label: string;
   name: string;
   id: string;
@@ -26,6 +27,7 @@ interface SelectProps {
 
 export default function Select({
   classname = "",
+  hasIcon = false,
   label,
   name,
   id,
@@ -88,7 +90,7 @@ export default function Select({
 
       {/* Custom select UI */}
       <div
-        className={`custom-select form-control ${isValid ? "valid" : ""} ${isOpen ? "open" : ""}`}
+        className={`custom-select form-control ${isValid ? "valid" : ""} ${isOpen ? "open" : ""} ${hasIcon ? "has-icon" : ""}`}
         tabIndex={0}
         onClick={() => setIsOpen((prev) => !prev)}
       >
