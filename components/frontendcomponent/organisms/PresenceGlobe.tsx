@@ -17,6 +17,7 @@ interface SaleItem {
 }
 
 interface PresenceProps {
+  classname?: string;
   heading: string;
   title?: string;
   filter: boolean;
@@ -41,6 +42,7 @@ const categoryOptions = [
 ];
 
 export default function PresenceGlobe({
+  classname = "",
   heading = "",
   title = "",
   filter = true,
@@ -49,16 +51,16 @@ export default function PresenceGlobe({
 }: PresenceProps) {
   const [activeli, setActiveLi] = useState(0);
   return (
-    <div className="presence_sec sec-pad-all">
+    <div className={`presence_sec sec-pad-all ${classname}`}>
       <div className="container">
         <div className="heading">
           <h3>{heading}</h3>
         </div>
         <div className="main_wrapper flex">
           <div className="left">
-            <div className="upper">
-              {title && <h4>{title}</h4>}
-              {filter && (
+            {filter && (
+              <div className="upper">
+                {title && <h4>{title}</h4>}
                 <div className="form form-grid">
                   <Select
                     classname="state"
@@ -77,8 +79,8 @@ export default function PresenceGlobe({
                     options={categoryOptions}
                   />
                 </div>
-              )}
-            </div>
+              </div>
+            )}
             <ul className="filter_options">
               {filter
                 ? filterData.map((item, index) => (
@@ -108,13 +110,18 @@ export default function PresenceGlobe({
                     </li>
                   ))
                 : saleData.map((item, index) => (
-                    <li className={`sale_li `} key={index}>
+                    <li
+                      className={`sale_li ${index === activeli ? "active" : ""}`}
+                      key={index}
+                    >
                       <div className="price">
                         <h6>{item.price}</h6>
                         <p>{item.status}</p>
                       </div>
                       <div className="desc">
-                        <p>{item.desc}</p>
+                        <div className="content">
+                          <p>{item.desc}</p>
+                        </div>
                       </div>
                       <div className="loc">
                         <div className="icon">

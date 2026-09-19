@@ -118,7 +118,75 @@
                 overflow-y: auto
                 padding-right: 10px
                 @include scrollbar(4px, var(--white), var(--primary), 0px)
-                li
+                li.sale_li 
+                    padding: 20px 35px
+                    transition: .5s ease
+                    background: $white
+                    &:not(:last-child)
+                        border-bottom: 1px solid #E2E2E2
+                    &.active, &:hover
+                        background: linear-gradient(0deg, #191542, #231976)
+                        .price
+                            h6
+                                color: $white
+                            p
+                                background: #FFFFFF33
+                                color: $white
+                        .loc
+                            color: $white
+                            p
+                                color: $white
+                    &.active
+                        .desc
+                            grid-template-rows: 1fr
+                            .content
+                                margin-bottom: 20px
+                    .price
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        gap: 40px
+                        margin-bottom: 14px
+                        h6
+                            font-size: 20px
+                            font-family: $PublicSans
+                            font-weight: 700
+                            line-height: 1.2
+                            transition: .5s ease
+                        p
+                            background: #90C94A
+                            padding: 4px 12px
+                            border-radius: 25px
+                            color: $black
+                            font-size: 14px
+                            font-weight: 500
+                            transition: .5s ease
+                    .desc
+                        display: grid
+                        grid-template-rows: 0fr
+                        transition: .5s ease
+                        .content
+                            transition: .5s ease
+                            margin-bottom: 0px
+                            overflow: hidden
+                        p
+                            color: #FFFFFFB2
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 1.3
+                    .loc
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        .icon
+                            flex: 0 1 auto
+                            width: 20px
+                            height: 20px
+                        p
+                            font-size: 14px
+                            font-weight: 500
+
+                li.filter_li 
                     display: flex
                     justify-content: space-between
                     align-items: center
@@ -285,3 +353,95 @@
                 height: 90px
                 img
                     object-fit: contain
+
+.banner.hero_banner
+    &::before
+        background: linear-gradient(0deg, #000, #0000 50%), linear-gradient(#000, #0000 40%)
+    .bg
+        height: calc(100vh - var(--headerfixed))
+        @include media(768)
+            height: 80vh
+        @include media(540)
+            height: 70vh
+    .banner-wrapper
+        top: unset
+        bottom: 15%
+        translate: 0 15%
+        .heading
+            text-align: center
+            margin: 0 auto
+            p
+                font-weight: 400
+                color: $white 
+                line-height: 1.4
+
+.project_col
+    display: block
+    border: 1px solid #E4E4E4
+    background: $white
+    border-radius: 10px
+    width: 100%
+    height: 100%
+    &:hover
+        figure
+            img
+                transform: scale(1.2)
+        figcaption
+            h5
+                color: $primary
+    figure
+        border-radius: 10px 10px 0 0
+        overflow: hidden    
+        line-height: 0
+        @include shine()
+        img
+            border-radius: inherit
+            transition: .8s ease
+    figcaption
+        padding: 22px 20px
+        h5
+            font-size: 20px
+            font-weight: 600
+            color: $black
+            transition: .5s ease
+        .location
+            font-size: 14px
+            font-weight: 400
+        ul
+            margin-top: 25px
+            display: flex
+            flex-wrap: wrap
+            li
+                flex: 1
+                display: flex
+                align-items: center
+                gap: 12px
+                padding: 0 20px
+                &:first-child
+                    padding-left: 0
+                    border-right: 1px solid #E0E0E0
+                &:last-child
+                    padding-right: 0
+                .icon
+                    flex: 0 1 auto
+                    width: 44px
+                    height: 44px
+                    background: #E9E9E9
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: $black
+                    border-radius: 50%
+                    svg, img
+                        width: 50%
+                        height: 50%
+                .info
+                    flex: 1
+                    h6
+                        font-weight: 500
+                        font-family: $PublicSans
+                        font-size: 14px
+                        color: $text
+                    p
+                        font-weight: 400
+                        color: $black
