@@ -1,0 +1,140 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.map_section {
+  width: 100%;
+  height: 600px;
+}
+.map_section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(1);
+  transition: 0.5s ease;
+}
+.map_section iframe:hover {
+  filter: grayscale(0);
+}
+
+.contact_details {
+  margin-top: var(--headerheight);
+}
+.contact_details .main_wrapper .colA, .contact_details .main_wrapper .colB {
+  flex: 1;
+  max-width: 50%;
+  width: 100%;
+}
+.contact_details .main_wrapper .colA {
+  padding: 65px 50px;
+  background: linear-gradient(270deg, #211B57, #282169, #372D90);
+  position: relative;
+}
+.contact_details .main_wrapper .colA::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: url("/images/logo-vector.svg");
+  transition: 0.5s ease;
+}
+.contact_details .main_wrapper .colA::before {
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  opacity: 0.1;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper .heading {
+  margin-bottom: 40px;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper .heading h1 {
+  color: var(--white);
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li:not(:last-child) {
+  margin-bottom: 40px;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .icon {
+  flex: 0 1 auto;
+  width: 34px;
+  height: 34px;
+  color: var(--white);
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .icon img, .contact_details .main_wrapper .colA .contact_details_wrapper ul li .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info {
+  flex: 1;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info h6 {
+  font-family: var(--publicsans);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info p {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6980392157);
+  max-width: 300px;
+  padding-bottom: 20px;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info a:hover {
+  transform: translateX(5px);
+  color: var(--white);
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info a:not(:last-child) {
+  margin-bottom: 5px;
+}
+.contact_details .main_wrapper .colA .contact_details_wrapper ul li .info a.direction {
+  color: var(--white);
+}
+.contact_details .main_wrapper .colB {
+  padding: 75px 60px;
+}
+.contact_details .main_wrapper .colB .heading {
+  text-align: center;
+  margin: 0 auto 50px;
+  max-width: 420px;
+}
+.contact_details .main_wrapper .colB .heading h2 {
+  font-size: 36px;
+  line-height: 1.1;
+}
+.contact_details .main_wrapper .colB .form .form-grid {
+  --item: 2;
+  --gaplr: 20px;
+}
+.contact_details .main_wrapper .colB .form .submit-grp {
+  margin-top: 50px;
+}
+.contact_details .main_wrapper .colB .form .submit-grp .btn {
+  margin: 0 auto;
+  --padding: 40px;
+}/*# sourceMappingURL=contact.css.map */

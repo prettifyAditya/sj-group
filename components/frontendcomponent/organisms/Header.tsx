@@ -71,7 +71,8 @@ export default function Header() {
   const [logoChange, setLogoChange] = useState<boolean>(false);
   const pathname = usePathname();
   const blogDetails = pathname.startsWith("/blog-details");
-  const headerFixed = blogDetails;
+  const contactUsPage = pathname.startsWith("/contact-us");
+  const headerFixed = blogDetails || contactUsPage;
   useEffect(() => {
     const handleScroll = (): void => {
       setIsScrolled(window.scrollY > 100);
