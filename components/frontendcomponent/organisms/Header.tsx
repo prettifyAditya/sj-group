@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import "@/uploads/sass/header/header.css";
@@ -68,6 +69,9 @@ const navItems: NavItem[] = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [logoChange, setLogoChange] = useState<boolean>(false);
+  const pathname = usePathname();
+  const blogDetails = pathname.startsWith("/blog-details");
+  const headerFixed = blogDetails;
   useEffect(() => {
     const handleScroll = (): void => {
       setIsScrolled(window.scrollY > 100);
@@ -80,12 +84,14 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className={`${isScrolled ? "header-fixed" : ""}`}>
+    <header
+      className={`${isScrolled ? "header-fixed" : ""} ${headerFixed ? "header-fit" : ""}`}
+    >
       <div className="container">
         <div className="header-container">
           <div className="colA">
             <Link href="/" className="logo">
-              {logoChange ? (
+              {logoChange || headerFixed ? (
                 <Image
                   width={69}
                   height={80}

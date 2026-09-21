@@ -2635,6 +2635,9 @@ header.header-fit {
 header.header-fit::after {
   height: 100%;
 }
+header.header-fit .header-container .colB .nav-items li a {
+  color: var(--black);
+}
 header.header-shadow {
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
 }

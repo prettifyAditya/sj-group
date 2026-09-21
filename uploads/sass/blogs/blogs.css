@@ -124,117 +124,51 @@
 .banner.blog-detail-banner .bg .banner-wrapper .container {
   position: relative;
 }
-.banner.blog-detail-banner .bg .banner-wrapper .content {
-  max-width: 640px;
+.banner.blog-detail-banner .bg .banner-wrapper .container .content {
+  max-width: 480px;
 }
-@media only screen and (max-width: 991px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .content {
-    max-width: 567px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .content {
-    max-width: 430px;
-  }
-}
-.banner.blog-detail-banner .bg .banner-wrapper .content p {
+.banner.blog-detail-banner .bg .banner-wrapper .container .content p {
+  color: rgba(255, 255, 255, 0.6980392157);
+  font-weight: 500;
   margin-bottom: 20px;
 }
-.banner.blog-detail-banner .bg .banner-wrapper .content h2 {
-  font-size: 36px;
-  text-transform: capitalize;
-  line-height: 1.2;
+.banner.blog-detail-banner .bg .banner-wrapper .container .content h1 {
+  font-family: var(--publicsans);
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--white);
 }
-@media only screen and (max-width: 768px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .content h2 {
-    font-size: 32px;
-  }
-}
-@media only screen and (max-width: 540px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .content h2 {
-    font-size: 24px;
-  }
-}
-.banner.blog-detail-banner .bg .banner-wrapper .share_btn {
-  position: absolute;
-  bottom: 12%;
-  right: 4rem;
-  z-index: 1;
-}
-@media only screen and (max-width: 675px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn {
-    right: 15px;
-    bottom: 10%;
-  }
-}
-@media only screen and (max-width: 540px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn {
-    bottom: -60%;
-  }
-}
-@media only screen and (max-width: 675px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn .share-btn-ico img, .banner.blog-detail-banner .bg .banner-wrapper .share_btn .share-btn-ico svg {
-    width: 25px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn .share-btn-ico img, .banner.blog-detail-banner .bg .banner-wrapper .share_btn .share-btn-ico svg {
-    width: 20px;
-  }
-}
-.banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m {
-  position: absolute;
-  bottom: 100%;
-  margin-bottom: 20px;
-  left: 50%;
-  translate: -50% 0;
+
+.blog_overview .main_wrapper {
   display: flex;
-  gap: 20px;
-  flex-direction: column;
-  border-radius: 5px;
-  opacity: 0;
-  transform: scale(0.75) translateY(21px);
-  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  transform-origin: bottom;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  justify-content: center;
+  --gap: 70px;
+  gap: var(--gap);
 }
-@media only screen and (max-width: 540px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m {
-    flex-direction: row;
-    left: -100%;
-    margin-bottom: 0;
-    bottom: 50%;
-    translate: -100% 50%;
-    transform: scale(0.75) translateX(21px);
-  }
+.blog_overview .main_wrapper .colA {
+  flex: 1;
+  max-width: 100%;
+  width: 100%;
 }
-.banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m.open {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  pointer-events: all;
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-          user-select: auto;
+.blog_overview .main_wrapper .colB {
+  flex: 0 1 auto;
+  max-width: 380px;
+  width: 100%;
 }
-@media only screen and (max-width: 540px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m.open {
-    transform: scale(1) translateX(0);
-  }
+
+.more_blogs_sec .heading {
+  text-align: center;
+  margin-bottom: 40px;
 }
-.banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m li svg {
-  fill: var(--white);
-  width: 25px;
+.more_blogs_sec .main_wrapper {
+  position: relative;
 }
-@media only screen and (max-width: 768px) {
-  .banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m li svg {
-    width: 20px;
-  }
+.more_blogs_sec .main_wrapper .more_slider {
+  max-width: 97%;
+  padding: 5px;
 }
-.banner.blog-detail-banner .bg .banner-wrapper .share_btn .side_ico-m li svg:hover {
-  fill: var(--primary);
+.more_blogs_sec .main_wrapper .more_slider .blogs_col {
+  box-shadow: 0 0px 10px rgba(149, 157, 165, 0.2);
 }
 
 .blog-detail-secA .website-content {
