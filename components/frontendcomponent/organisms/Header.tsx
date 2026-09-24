@@ -58,12 +58,12 @@ const servicesDropdown: DropdownItem[] = [
 ];
 
 const navItems: NavItem[] = [
-  { label: "About Us", href: "javascript:;" },
+  { label: "About Us", href: "/about-us" },
   { label: "Services", href: "javascript:;", dropdown: servicesDropdown },
-  { label: "Projects", href: "javascript:;" },
-  { label: "Sustainability", href: "javascript:;" },
+  { label: "Projects", href: "/project-listing" },
+  { label: "Sustainability", href: "/sustainability" },
   { label: "Careers", href: "javascript:;" },
-  { label: "Blogs", href: "javascript:;" },
+  { label: "Blogs", href: "/blog-listing" },
 ];
 
 export default function Header() {
@@ -72,7 +72,9 @@ export default function Header() {
   const pathname = usePathname();
   const blogDetails = pathname.startsWith("/blog-details");
   const contactUsPage = pathname.startsWith("/contact-us");
-  const headerFixed = blogDetails || contactUsPage;
+  const privacyPage = pathname.startsWith("/privacy-policy");
+  const careerPage = pathname.startsWith("/career");
+  const headerFixed = blogDetails || contactUsPage || privacyPage || careerPage;
   useEffect(() => {
     const handleScroll = (): void => {
       setIsScrolled(window.scrollY > 100);
@@ -166,7 +168,7 @@ export default function Header() {
 
           <div className="colC">
             <Button
-              linkHref="/"
+              linkHref="/contact-us"
               buttonText="Contact Us"
               svgpath={
                 <svg

@@ -1,463 +1,771 @@
 @import '../_var'
 
 .about_sec
-    .main_wrapper
-        justify-content: center
-        align-items: center
-        --gap: 100px
-        gap: var(--gap)
-        .figure-animation
-            flex: 0 1 auto
-            width: 100%
-            max-width: 490px
-            height: 490px
-            border: 1px solid #DBDBDB
-            border-radius: 50%
-            // overflow: hidden
-            padding: 15px
-            .animation_wrapper
-                width: 100%
-                height: 100%
-                position: relative
-                background: url("/images/home/road-vector.png") repeat-x
-                background-position: 0 50%
-                animation: road-scroll 20s linear infinite
-                overflow: hidden
-                border-radius: 50%
-                border: inherit
-                @keyframes road-scroll
-                    from
-                        background-position: 0 50%
-                    to
-                        background-position: -1000px 50%
-                .truck
-                    position: absolute
-                    top: 55%
-                    left: 40%
-                    transform: translate(-40%, -55%)
-                    width: 286px
-                    height: auto
-                .bottom_circle
-                    width: 100%
-                    height: 22%
-                    background: #F9F9FA 
-                    position: absolute
-                    bottom: 0
-                    left: 50%
-                    transform: translate(-50%, 0)
-                    border-top: 1px solid #C7C7C7
-                    
-        figcaption
-            flex: 0 1 auto
-            width: 100%
-            max-width: 50%
-            .heading
-                h3
-                    margin-bottom: 10px
-                .desc
-                    margin-bottom: 25px
-                    p
-                        &:not(:last-child)
-                            margin-bottom: 10px
+	.main_wrapper
+		justify-content: center
+		align-items: center
+		--gap: 100px
+		gap: var(--gap)
+		.figure-animation
+			flex: 0 1 auto
+			width: 100%
+			max-width: 490px
+			height: 490px
+			border: 1px solid #DBDBDB
+			border-radius: 50%
+			// overflow: hidden
+			padding: 15px
+			.animation_wrapper
+				width: 100%
+				height: 100%
+				position: relative
+				background: url("/images/home/road-vector.png") repeat-x
+				background-position: 0 50%
+				animation: road-scroll 20s linear infinite
+				overflow: hidden
+				border-radius: 50%
+				border: inherit
+				@keyframes road-scroll
+					from
+						background-position: 0 50%
+					to
+						background-position: -1000px 50%
+				.truck
+					position: absolute
+					top: 55%
+					left: 40%
+					transform: translate(-40%, -55%)
+					width: 286px
+					height: auto
+				.bottom_circle
+					width: 100%
+					height: 22%
+					background: #F9F9FA 
+					position: absolute
+					bottom: 0
+					left: 50%
+					transform: translate(-50%, 0)
+					border-top: 1px solid #C7C7C7
+					
+		figcaption
+			flex: 0 1 auto
+			width: 100%
+			max-width: 50%
+			.heading
+				h3
+					margin-bottom: 10px
+				.desc
+					margin-bottom: 25px
+					p
+						&:not(:last-child)
+							margin-bottom: 10px
 
 .presence_sec
-    .heading
-        text-align: center
-        margin-bottom: 50px
-    .main_wrapper
-        background: #F3F3F3
-        border-radius: 10px
-        box-shadow: 0px 2px 8px 0 #63636333
-        .left
-            flex: 0 1 auto
-            width: 100%
-            max-width: 400px
-            padding: 20px 20px 40px
-            .upper
-                margin-bottom: 20px 
-                h4
-                    font-size: 20px
-                    font-family: $PublicSans
-                    font-weight: 600
-                    margin-bottom: 25px
-                .form
-                    --item: 2
-                    --gaplr: 15px
-                    --inputsize: 30px
-                    .form-group
-                        padding: 24px 8px 8px
-                        background: $white
-                        --iconsize: 18px
-                        --iconspace: 10px
-                        &::before, &::after
-                            display: none
-                        label
-                            opacity: 1
-                            top: 8px
-                            // position: static
-                            display: inline-block
-                            margin-bottom: 2px
-                            padding-left: calc(var(--iconsize) + var(--iconspace) + 8px)
-                            color: #66666680
-                            font-size: 14px
-                        .custom-select
-                            --iconsize: 18px
-                            --iconspace: 10px
-                            &::before
-                                background-image: url(/icon/arrow-down-black.svg)
-                            .current
-                                padding-right: calc( var(--arrow) + var(--arrowspace) )
-                        &.state
-                            .custom-select.has-icon
-                                --iconurl: url("/icon/location-prime.svg")
-                        &.category
-                            .custom-select.has-icon
-                                --iconurl: url("/icon/clock-prime.svg")
-            .filter_options
-                max-height: 414px
-                overflow-y: auto
-                padding-right: 10px
-                @include scrollbar(4px, var(--white), var(--primary), 0px)
-                li.sale_li 
-                    padding: 20px 35px
-                    transition: .5s ease
-                    background: $white
-                    &:not(:last-child)
-                        border-bottom: 1px solid #E2E2E2
-                    &.active, &:hover
-                        background: linear-gradient(0deg, #191542, #231976)
-                        .price
-                            h6
-                                color: $white
-                            p
-                                background: #FFFFFF33
-                                color: $white
-                        .loc
-                            color: $white
-                            p
-                                color: $white
-                    &.active
-                        .desc
-                            grid-template-rows: 1fr
-                            .content
-                                margin-bottom: 20px
-                    .price
-                        display: flex
-                        align-items: center
-                        justify-content: space-between
-                        gap: 40px
-                        margin-bottom: 14px
-                        h6
-                            font-size: 20px
-                            font-family: $PublicSans
-                            font-weight: 700
-                            line-height: 1.2
-                            transition: .5s ease
-                        p
-                            background: #90C94A
-                            padding: 4px 12px
-                            border-radius: 25px
-                            color: $black
-                            font-size: 14px
-                            font-weight: 500
-                            transition: .5s ease
-                    .desc
-                        display: grid
-                        grid-template-rows: 0fr
-                        transition: .5s ease
-                        .content
-                            transition: .5s ease
-                            margin-bottom: 0px
-                            overflow: hidden
-                        p
-                            color: #FFFFFFB2
-                            font-weight: 400
-                            font-size: 14px
-                            line-height: 1.3
-                    .loc
-                        display: flex
-                        align-items: center
-                        gap: 5px
-                        .icon
-                            flex: 0 1 auto
-                            width: 20px
-                            height: 20px
-                        p
-                            font-size: 14px
-                            font-weight: 500
+	.heading
+		text-align: center
+		margin-bottom: 50px
+	.main_wrapper
+		background: #F3F3F3
+		border-radius: 10px
+		box-shadow: 0px 2px 8px 0 #63636333
+		.left
+			flex: 0 1 auto
+			width: 100%
+			max-width: 400px
+			padding: 20px 20px 40px
+			.upper
+				margin-bottom: 20px 
+				h4
+					font-size: 20px
+					font-family: $PublicSans
+					font-weight: 600
+					margin-bottom: 25px
+				.form
+					--item: 2
+					--gaplr: 15px
+					--inputsize: 30px
+					.form-group
+						padding: 24px 8px 8px
+						background: $white
+						--iconsize: 18px
+						--iconspace: 10px
+						&::before, &::after
+							display: none
+						label
+							opacity: 1
+							top: 8px
+							// position: static
+							display: inline-block
+							margin-bottom: 2px
+							padding-left: calc(var(--iconsize) + var(--iconspace) + 8px)
+							color: #66666680
+							font-size: 14px
+						.custom-select
+							--iconsize: 18px
+							--iconspace: 10px
+							&::before
+								background-image: url(/icon/arrow-down-black.svg)
+							.current
+								padding-right: calc( var(--arrow) + var(--arrowspace) )
+						&.state
+							.custom-select.has-icon
+								--iconurl: url("/icon/location-prime.svg")
+						&.category
+							.custom-select.has-icon
+								--iconurl: url("/icon/clock-prime.svg")
+			.filter_options
+				max-height: 414px
+				overflow-y: auto
+				padding-right: 10px
+				@include scrollbar(4px, var(--white), var(--primary), 0px)
+				li.sale_li 
+					padding: 20px 35px
+					transition: .5s ease
+					background: $white
+					&:not(:last-child)
+						border-bottom: 1px solid #E2E2E2
+					&.active, &:hover
+						background: linear-gradient(0deg, #191542, #231976)
+						.price
+							h6
+								color: $white
+							p
+								background: #FFFFFF33
+								color: $white
+						.loc
+							color: $white
+							p
+								color: $white
+					&.active
+						.desc
+							grid-template-rows: 1fr
+							.content
+								margin-bottom: 20px
+					.price
+						display: flex
+						align-items: center
+						justify-content: space-between
+						gap: 40px
+						margin-bottom: 14px
+						h6
+							font-size: 20px
+							font-family: $PublicSans
+							font-weight: 700
+							line-height: 1.2
+							transition: .5s ease
+						p
+							background: #90C94A
+							padding: 4px 12px
+							border-radius: 25px
+							color: $black
+							font-size: 14px
+							font-weight: 500
+							transition: .5s ease
+					.desc
+						display: grid
+						grid-template-rows: 0fr
+						transition: .5s ease
+						.content
+							transition: .5s ease
+							margin-bottom: 0px
+							overflow: hidden
+						p
+							color: #FFFFFFB2
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.3
+					.loc
+						display: flex
+						align-items: center
+						gap: 5px
+						.icon
+							flex: 0 1 auto
+							width: 20px
+							height: 20px
+						p
+							font-size: 14px
+							font-weight: 500
 
-                li.filter_li 
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
-                    background: var(--white)
-                    cursor: pointer
-                    gap: 42px
-                    padding: 20px
-                    transition: all .5s ease-in-out
-                    &:not(:last-child)
-                        margin-bottom: 3px
-                    &:hover, &.active
-                        background: $primary
-                        .info
-                            h6
-                                color: $white
-                            p
-                                color: #FFFFFFB2
-                        .icon
-                            svg
-                                path
-                                    fill: $white
-                    .info
-                        flex: 1
-                        h6
-                            font-family: $PublicSans
-                            font-size: 14px
-                            font-weight: 600
-                            margin-bottom: 4px
-                            transition: .5s ease
-                        p
-                            color: #666666B2
-                            font-weight: 500
-                            font-size: 14px
-                            line-height: 1.3
-                            transition: .5s ease
+				li.filter_li 
+					display: flex
+					justify-content: space-between
+					align-items: center
+					background: var(--white)
+					cursor: pointer
+					gap: 42px
+					padding: 20px
+					transition: all .5s ease-in-out
+					&:not(:last-child)
+						margin-bottom: 3px
+					&:hover, &.active
+						background: $primary
+						.info
+							h6
+								color: $white
+							p
+								color: #FFFFFFB2
+						.icon
+							svg
+								path
+									fill: $white
+					.info
+						flex: 1
+						h6
+							font-family: $PublicSans
+							font-size: 14px
+							font-weight: 600
+							margin-bottom: 4px
+							transition: .5s ease
+						p
+							color: #666666B2
+							font-weight: 500
+							font-size: 14px
+							line-height: 1.3
+							transition: .5s ease
 
-                    .icon
-                        flex: 0 1 auto
-                        width: 22px
-        .right
-            flex: 1 
-            iframe
-                border-radius: 0 10px 10px 0 
-                filter: grayscale(1)
-                line-height: 0
+					.icon
+						flex: 0 1 auto
+						width: 22px
+		.right
+			flex: 1 
+			iframe
+				border-radius: 0 10px 10px 0 
+				filter: grayscale(1)
+				line-height: 0
 
 .milestones_sec
-    .heading
-        text-align: center
-        margin-bottom: 70px
-    .milestone_slider
-        .swiper-slide
-            @include media-min(1440)
-                width: 340px
-            &:nth-child(odd)
-                .milestone_col
-                    .desc
-                        padding-bottom: 0
-                        &::before
-                            display: none
-                    &::before
-                        background-position: 50% 56%
-            &:nth-child(even)
-                .milestone_col
-                    flex-direction: column-reverse
-                    &::before
-                        transform: translate(0, -50%) rotate(180deg) scale(1.01)
-                        background-position: 50% 62.2%
-                    figure
-                        margin-bottom: 0
-                        margin-top: 60px
-                    .desc
-                        padding-top: 0
-                        &::after 
-                            display: none
-                    .year
-                        margin-top: 15px
-                        margin-bottom: 0
-        .milestone_col
-            position: relative
-            display: flex
-            flex-direction: column
-            align-items: center
-            &::before
-                content: ""
-                position: absolute
-                top: 50%
-                left: 0
-                transform: translate(0, -50%)
-                width: 100%
-                height: 100%
-                background: url("/images/home/trail.svg")
-                background-repeat: no-repeat
-                background-position: 50% 50%
-                background-size: contain
-                z-index: -1
-            figure
-                margin-bottom: 60px
-                height: 110px
-                img
-                    object-fit: contain
-            .year
-                display: inline-block
-                font-size: 20px
-                font-weight: 600
-                color: $black
-                margin-bottom: 15px
-            .number
-                display: flex
-                align-items: center
-                justify-content: center
-                width: 70px
-                height: 70px
-                border-radius: 50%
-                border: 1px dashed #737373
-                span
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    width: 50px
-                    height: 50px
-                    background: $secondary
-                    color: $white
-                    font-size: 24px
-                    font-weight: 700
-                    border-radius: 50%
-            .desc
-                position: relative
-                text-align: center
-                max-width: 230px
-                padding: 110px 0
-                height: 230px
-                overflow-y: auto
-                &::before, &::after
-                    content: ""
-                    position: absolute
-                    left: 50%
-                    width: 1px
-                    height: 34px
-                    border: 1px dashed #737373
-                &::before
-                    bottom: 35%
-                &::after
-                    top: 25%
-                h6
-                    font-size: 20px
-                    font-weight: 600
-                    line-height: 1.1
-                    font-family: $PublicSans
-                    margin-bottom: 7px
-                p
-                    font-weight: 400
-                    font-size: 14px
-                    line-height: 1.3
+	.heading
+		text-align: center
+		margin-bottom: 70px
+	.milestone_slider
+		.swiper-slide
+			@include media-min(1440)
+				width: 340px
+			&:nth-child(odd)
+				.milestone_col
+					.desc
+						padding-bottom: 0
+						&::before
+							display: none
+					&::before
+						background-position: 50% 56%
+			&:nth-child(even)
+				.milestone_col
+					flex-direction: column-reverse
+					&::before
+						transform: translate(0, -50%) rotate(180deg) scale(1.01)
+						background-position: 50% 62.2%
+					figure
+						margin-bottom: 0
+						margin-top: 60px
+					.desc
+						padding-top: 0
+						&::after 
+							display: none
+					.year
+						margin-top: 15px
+						margin-bottom: 0
+		.milestone_col
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: center
+			&::before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translate(0, -50%)
+				width: 100%
+				height: 100%
+				background: url("/images/home/trail.svg")
+				background-repeat: no-repeat
+				background-position: 50% 50%
+				background-size: contain
+				z-index: -1
+			figure
+				margin-bottom: 60px
+				height: 110px
+				img
+					object-fit: contain
+			.year
+				display: inline-block
+				font-size: 20px
+				font-weight: 600
+				color: $black
+				margin-bottom: 15px
+			.number
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 70px
+				height: 70px
+				border-radius: 50%
+				border: 1px dashed #737373
+				span
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 50px
+					height: 50px
+					background: $secondary
+					color: $white
+					font-size: 24px
+					font-weight: 700
+					border-radius: 50%
+			.desc
+				position: relative
+				text-align: center
+				max-width: 230px
+				padding: 110px 0
+				height: 230px
+				overflow-y: auto
+				&::before, &::after
+					content: ""
+					position: absolute
+					left: 50%
+					width: 1px
+					height: 34px
+					border: 1px dashed #737373
+				&::before
+					bottom: 35%
+				&::after
+					top: 25%
+				h6
+					font-size: 20px
+					font-weight: 600
+					line-height: 1.1
+					font-family: $PublicSans
+					margin-bottom: 7px
+				p
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.3
 
 .clients_sec
-    .heading
-        text-align: center
-        margin-bottom: 40px
-    .clients_slider
-        .swiper-wrapper
-            transition-timing-function: linear !important
-            figure
-                height: 90px
-                img
-                    object-fit: contain
+	.heading
+		text-align: center
+		margin-bottom: 40px
+	.clients_slider
+		.swiper-wrapper
+			transition-timing-function: linear !important
+			figure
+				height: 90px
+				img
+					object-fit: contain
 
 .banner.hero_banner
-    &::before
-        background: linear-gradient(0deg, #000, #0000 50%), linear-gradient(#000, #0000 40%)
-    .bg
-        height: calc(100vh - var(--headerfixed))
-        @include media(768)
-            height: 80vh
-        @include media(540)
-            height: 70vh
-    .banner-wrapper
-        top: unset
-        bottom: 15%
-        translate: 0 15%
-        .heading
-            text-align: center
-            margin: 0 auto
-            p
-                font-weight: 400
-                color: $white 
-                line-height: 1.4
+	&::before
+		background: linear-gradient(0deg, #000, #0000 50%), linear-gradient(#000, #0000 40%)
+	.bg
+		height: calc(100vh - var(--headerfixed))
+		@include media(768)
+			height: 80vh
+		@include media(540)
+			height: 70vh
+	.banner-wrapper
+		top: unset
+		bottom: 15%
+		translate: 0 15%
+		.heading
+			text-align: center
+			margin: 0 auto
+			p
+				font-weight: 400
+				color: $white 
+				line-height: 1.4
 
 .project_col
-    display: block
-    border: 1px solid #E4E4E4
-    background: $white
-    border-radius: 10px
-    width: 100%
-    height: 100%
-    &:hover
-        figure
-            img
-                transform: scale(1.2)
-        figcaption
-            h5
-                color: $primary
-    figure
-        border-radius: 10px 10px 0 0
-        overflow: hidden    
-        line-height: 0
-        @include shine()
-        img
-            border-radius: inherit
-            transition: .8s ease
-    figcaption
-        padding: 22px 20px
-        h5
-            font-size: 20px
-            font-weight: 600
-            color: $black
-            transition: .5s ease
-        .location
-            font-size: 14px
-            font-weight: 400
-        ul
-            margin-top: 25px
-            display: flex
-            flex-wrap: wrap
-            li
-                flex: 1
-                display: flex
-                align-items: center
-                gap: 12px
-                padding: 0 20px
-                &:first-child
-                    padding-left: 0
-                    border-right: 1px solid #E0E0E0
-                &:last-child
-                    padding-right: 0
-                .icon
-                    flex: 0 1 auto
-                    width: 44px
-                    height: 44px
-                    background: #E9E9E9
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    color: $black
-                    border-radius: 50%
-                    svg, img
-                        width: 50%
-                        height: 50%
-                .info
-                    flex: 1
-                    h6
-                        font-weight: 500
-                        font-family: $PublicSans
-                        font-size: 14px
-                        color: $text
-                    p
-                        font-weight: 400
-                        color: $black
+	display: block
+	border: 1px solid #E4E4E4
+	background: $white
+	border-radius: 10px
+	width: 100%
+	height: 100%
+	&:hover
+		figure
+			img
+				transform: scale(1.2)
+		figcaption
+			h5
+				color: $primary
+	figure
+		border-radius: 10px 10px 0 0
+		overflow: hidden    
+		line-height: 0
+		@include shine()
+		img
+			border-radius: inherit
+			transition: .8s ease
+	figcaption
+		padding: 22px 20px
+		h5
+			font-size: 20px
+			font-weight: 600
+			color: $black
+			transition: .5s ease
+		.location
+			font-size: 14px
+			font-weight: 400
+		ul
+			margin-top: 25px
+			display: flex
+			flex-wrap: wrap
+			li
+				flex: 1
+				display: flex
+				align-items: center
+				gap: 12px
+				padding: 0 20px
+				&:first-child
+					padding-left: 0
+					border-right: 1px solid #E0E0E0
+				&:last-child
+					padding-right: 0
+				.icon
+					flex: 0 1 auto
+					width: 44px
+					height: 44px
+					background: #E9E9E9
+					display: flex
+					align-items: center
+					justify-content: center
+					color: $black
+					border-radius: 50%
+					svg, img
+						width: 50%
+						height: 50%
+				.info
+					flex: 1
+					h6
+						font-weight: 500
+						font-family: $PublicSans
+						font-size: 14px
+						color: $text
+					p
+						font-weight: 400
+						color: $black
 
 .contact_form
-    position: sticky
-    top: var(--headerheight)
-    padding: 20px 35px 40px
-    box-shadow: 0px 2px 8px 0 #63636333
-    border-radius: 10px
-    .icon
-        width: 51px
-        height: 51px
-        margin: 0 auto 35px
-    .form-grid
-        --gaptb: 28px
-    .btn_wrap
-        margin-top: 35px
-        justify-content: center
+	position: sticky
+	top: var(--headerheight)
+	padding: 20px 35px 40px
+	box-shadow: 0px 2px 8px 0 #63636333
+	border-radius: 10px
+	.icon
+		width: 51px
+		height: 51px
+		margin: 0 auto 35px
+	.form-grid
+		--gaptb: 28px
+	.btn_wrap
+		margin-top: 35px
+		justify-content: center
+
+.team_col
+	position: relative
+	width: 100%
+	height: 100%
+	border-radius: 10px
+	cursor: pointer
+	&.no_cursor
+		cursor: default
+	&:hover
+		figure
+			img
+				transform: scale(1.1)
+		figcaption
+			.moreBtn
+				transform: translate(3px, -3px)
+			
+	figure
+		display: block
+		width: 100%
+		line-height: 0
+		border-radius: 10px
+		overflow: hidden
+		img 
+			border-radius: 10px 
+	figcaption
+		position: absolute
+		left: 50%
+		bottom: 5%
+		transform: translate(-50%, 5%)
+		width: 100%
+		max-width: 92% 
+		background: #FFFFFFE5
+		padding: 15px
+		border-radius: 10px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		gap: 10px
+		.mem_details
+			flex: 1
+			.name
+				font-family: $PublicSans
+				font-size: 18px
+				font-weight: 600
+				line-height: 1.2
+				margin-bottom: 3px
+				@include media(991)  
+					font-size: 16px
+			.desg
+				font-size: 14px
+				font-weight: 400
+				color: $text
+				line-height: 1.2
+		.moreBtn
+			flex: 0 1 42px 
+			width: 42px
+			height: 42px
+			background: $secondary
+			display: flex
+			align-items: center
+			justify-content: center
+			color: $black
+			border-radius: 50%
+			transition: .5s
+
+.team-pop.model
+	max-width: 900px
+	height: fit-content
+	left: 50%
+	top: 50%
+	transform: translate(-50%, 100vh)
+	transition: 0.6s ease
+	border-radius: 15px
+	@include media(768)
+		height: 100%
+		border-radius: 0
+		overflow-y: auto
+	&.is-open
+		transform: translate(-50%, -50%)
+		transition: 0.6s ease
+	.close:not(.btn)
+		display: flex
+		align-items: center
+		gap: 12px
+		font-size: 14px
+		top: 30px
+		right: 30px
+		z-index: 1
+		svg
+			width: 20px
+			height: 20px
+			path
+				stroke: $primary
+				stroke-width: 2px
+	.model-body
+		padding: 0 50px 50px
+		margin-top: 50px
+		background: $white
+		border-radius: inherit
+		@include media(991)  
+			padding: 0 30px 80px
+		@include media(768)
+			padding: 0 20px 20px  
+			margin-top: 50px
+		@include media(540)
+			overflow-y: auto    
+		.team_wrapper
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			gap: 60px
+			@include media(768)
+				flex-direction: column
+			@include media(540) 
+				gap: 20px
+			figure
+				flex: 0 1 auto
+				width: 100%
+				max-width: 320px
+				position: relative
+				line-height: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				@include media(768) 
+					flex: 0 1 50%
+					width: 50%
+				@include media(540) 
+					flex: 0 1 100%
+					width: 70%
+			figcaption
+				flex: 1
+				.heading
+					padding-bottom: 15px
+					border-bottom: 1px solid #D2D2D2
+					@include media(768) 
+						text-align: center
+					h6
+						font-family: $PublicSans
+						font-weight: 600
+						font-size: 24px
+						color: $primary
+						@include media(991)  
+							font-size: 22px
+						@include media(540) 
+							font-size: 20px
+					p
+						font-size: 16px
+						font-weight: 500
+						color: $text
+						margin-top: 0
+				.team_details
+					margin-top: 20px
+					padding: 0px 15px 15px 0
+					max-height: 240px
+					overflow-y: auto
+					@include scrollbar($width: 4px,$background: #D9D9D9,$color: $primary,)
+					@include media(768) 
+						max-height: 100%
+						overflow-y: visible
+					p
+						font-size: 14px
+						&:not(:last-child)
+							margin-bottom: 10px
+
+.social_col.item-md
+	border-radius: 10px
+	overflow: hidden
+	&:hover
+		figure
+			img
+				transform: scale(1.2)
+		figcaption
+			transform: translateY(0)
+			.desc
+				margin: 15px 0 20px
+	&::before
+		border-radius: inherit
+		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 70%)
+	figure
+		border-radius: inherit
+		img
+			border-radius: inherit
+	figcaption
+		padding: 0 25px 30px
+		transform: translateY(160px)
+		transition: .5s ease
+		h6
+			position: relative
+			font-size: 24px
+			color: $white
+			line-height: 1.2
+			padding-bottom: 15px
+			&::before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 53px
+				height: 5px
+				background: $secondary
+		.desc
+			margin: 40px 0 20px
+			height: 72px
+			transition: .5s ease
+			p
+				color: $white
+				font-weight: 500
+				@include line-clamp($line: 3)
+
+.positions-pop.model
+	max-width: 90%
+	height: fit-content
+	left: 50%
+	top: 50%
+	border-radius: 15px
+	transform: translate(-50%, 100vh)
+	transition: 0.6s ease
+	@include media(768)
+		height: 100%
+		max-width: 100%
+		border-radius: 0
+	&.is-open
+		transform: translate(-50%, -50%)
+		transition: 0.6s ease
+	.close:not(.btn)
+		top: 35px
+		right: 35px
+		z-index: 1
+		svg
+			width: 20px
+			height: 20px
+	.model-body
+		padding: 0 30px 30px
+		margin-top: 30px
+		border-radius: 15px
+		background: $white
+		max-height: 90vh
+		overflow-y: auto
+		@include scrollbar($width: 5px,$background: #f5f5f5, $color: #000)
+		@include media(768)
+			padding: 0 20px 20px  
+		.post_wrapper
+			display: flex
+			flex-wrap: wrap
+			@include media(991)
+				flex-direction: column
+			.post_details_wrap
+				flex: 1
+				padding: 30px
+				border-right: 1px solid #0000002E
+				@include media(1280)
+					padding: 20px
+				@include media(991)
+					border-right: none
+					padding: 0
+				.post-content
+					p, li
+						font-weight: 400
+			.post_form
+				flex: 1
+				padding: 100px 20px 20px 40px
+				@include media(1280)
+					padding: 20px
+				@include media(991)
+					padding: 30px 0 0 0 
+				.heading
+					h2
+						color: $primary
+						font-size: 30px
+						@include media(540)
+							font-size: 24px
+						span
+							font-weight: 300
+							font-style: italic
+				.form-grid
+					--item: 2 
+					--labelfontbefore: 14px
+					--gaplr: 15px
+					--color: var(--black)
+					margin: 30px 0 50px
+					@include media(540)
+						--item: 1
+					.form-group
+						&::before, &::after
+							display: none
+						.error
+							top: calc(100% + 6px)
+						label
+							position: static
+							display: block
+							margin-bottom: 10px
+							color: $text
+							font-weight: 500
+						.form-control, .file-name
+							background: #E8E8E8
+							padding: 0 10px
+							outline: none
+							border-radius: 5px !important
+							&::placeholder
+								color: #818181
+						.file-name
+							--paddingleftright: 10px
+							&::before
+								color: $text
+							&::after
+								filter: brightness(.5)

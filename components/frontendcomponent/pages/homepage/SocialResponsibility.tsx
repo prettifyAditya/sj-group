@@ -1,43 +1,34 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import SwiperButton from "../../atoms/SwiperButton";
-import Button from "../../atoms/Button";
+import SocialCol from "../../molecules/SocialCol";
 
-interface socialSlide {
-  img: string;
-  heading: string;
-  desc: string;
-  linkHref: string;
-}
-
-const socialData: socialSlide[] = [
+const socialData = [
   {
     img: "/images/home/social1.jpg",
     heading: "Sustainability initiatives",
     desc: "Our sustainability initiatives focus on optimizing resources, minimizing emissions, and building ..",
-    linkHref: "/",
+    linkHref: "/sustainability",
   },
   {
     img: "/images/home/social2.jpg",
     heading: "Energy / Waste Reduction",
     desc: "Our sustainability initiatives focus on optimizing resources, minimizing emissions, and building ..",
-    linkHref: "/",
+    linkHref: "/sustainability",
   },
   {
     img: "/images/home/social3.jpg",
     heading: "Social Responsibility Activities",
     desc: "Our sustainability initiatives focus on optimizing resources, minimizing emissions, and building ..",
-    linkHref: "/",
+    linkHref: "/sustainability",
   },
   {
     img: "/images/home/social1.jpg",
     heading: "Sustainability initiatives",
     desc: "Our sustainability initiatives focus on optimizing resources, minimizing emissions, and building ..",
-    linkHref: "/",
+    linkHref: "/sustainability",
   },
 ];
 
@@ -81,27 +72,7 @@ export default function SocialResponsibility() {
           >
             {socialData.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="social_col item-md">
-                  <figure>
-                    <Image
-                      src={item.img}
-                      width={380}
-                      height={410}
-                      alt="Social_img"
-                    />
-                  </figure>
-                  <figcaption>
-                    <h6>{item.heading}</h6>
-                    <div className="desc">
-                      <p>{item.desc}</p>
-                    </div>
-                    <Button
-                      linkHref={item.linkHref}
-                      classname="solid-secondary"
-                      buttonText="Read More"
-                    ></Button>
-                  </figcaption>
-                </div>
+                <SocialCol data={item} />
               </SwiperSlide>
             ))}
           </Swiper>

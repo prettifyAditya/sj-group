@@ -23,7 +23,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "We operate one of the industry's most advanced heavy-equipment fleets, combining world-class machinery, intelligent technology, and proactive maintenance to deliver reliable performance and uninterrupted project execution.",
     ctaText: "Explore Our Services",
-    ctaHref: "/services",
+    ctaHref: "/service-listing",
     videoSrc: "/video/hero1.mp4",
     poster: "/video/hero1-poster.jpg",
   },
@@ -32,7 +32,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "We operate one of the industry's most advanced heavy-equipment fleets, combining world-class machinery, intelligent technology, and proactive maintenance to deliver reliable performance and uninterrupted project execution.",
     ctaText: "Explore Our Services",
-    ctaHref: "/services",
+    ctaHref: "/service-listing",
     videoSrc: "/video/hero2.mp4",
     poster: "/video/hero2-poster.jpg",
   },
@@ -41,7 +41,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "We operate one of the industry's most advanced heavy-equipment fleets, combining world-class machinery, intelligent technology, and proactive maintenance to deliver reliable performance and uninterrupted project execution.",
     ctaText: "Explore Our Services",
-    ctaHref: "/services",
+    ctaHref: "/service-listing",
     videoSrc: "/video/hero3.mp4",
     poster: "/video/hero3-poster.jpg",
   },

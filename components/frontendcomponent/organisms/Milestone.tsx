@@ -11,13 +11,17 @@ interface milestone {
   desc: string;
 }
 
-export default function Milestone({
-  milestoneData = [],
-}: {
+interface milestoneProps {
+  classname?: string;
   milestoneData?: milestone[];
-}) {
+}
+
+export default function Milestone({
+  classname = "",
+  milestoneData = [],
+}: milestoneProps) {
   return (
-    <div className="milestones_sec sec-pad-all">
+    <div className={`milestones_sec sec-pad-all ${classname}`}>
       <div className="heading">
         <h3>Milestones</h3>
       </div>

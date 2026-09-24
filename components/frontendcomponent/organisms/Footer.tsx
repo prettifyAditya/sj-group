@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import TeamPop from "./TeamPop";
+import Overlay from "./Overlay";
 
 interface FooterNavItem {
   label: string;
@@ -8,11 +10,11 @@ interface FooterNavItem {
 }
 
 const footerNavItems: FooterNavItem[] = [
-  { label: "About SJ Group", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Contact us", href: "/contact" },
+  { label: "About SJ Group", href: "/about-us" },
+  { label: "Services", href: "/service-listing" },
+  { label: "Projects", href: "/project-listing" },
+  { label: "Blogs", href: "/blog-listing" },
+  { label: "Contact us", href: "/contact-us" },
   { label: "Enquire Now", href: "/enquire", isButton: true },
 ];
 
@@ -52,102 +54,106 @@ const socialLinks: SocialLink[] = [
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="container">
-        <div className="upper-footer">
-          <div className="main_wrapper flex">
-            <div className="colA">
-              <Link href="/" className="logo">
-                <Image
-                  src="/images/logo.svg"
-                  className="svg"
-                  width={101}
-                  height={118}
-                  alt="logo"
-                />
-              </Link>
+    <>
+      <footer>
+        <div className="container">
+          <div className="upper-footer">
+            <div className="main_wrapper flex">
+              <div className="colA">
+                <Link href="/" className="logo">
+                  <Image
+                    src="/images/logo.svg"
+                    className="svg"
+                    width={101}
+                    height={118}
+                    alt="logo"
+                  />
+                </Link>
+              </div>
+
+              <div className="colB">
+                <ul className="nav">
+                  {footerNavItems.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className={item.isButton ? "btn white" : undefined}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                <ul className="contact_group">
+                  <li>
+                    <div className="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#fff"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"
+                        />
+                      </svg>
+                    </div>
+                    <Link href="tel:+91-0000 000 000">+91-0000 000 000</Link>
+                  </li>
+                  <li>
+                    <Link href="mailto:info@sjgroup.com">info@sjgroup.com</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="lower-footer">
+            <div className="copywite">
+              <p>© SJ Group. All rights reserved.</p>
+              <p className="pret">
+                Made by passion
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.prettifycreative.com/"
+                >
+                  <img
+                    src="/icon/prettify-light.svg"
+                    width={43}
+                    height={16}
+                    alt="prettify_logo"
+                  />
+                </Link>
+              </p>
             </div>
 
-            <div className="colB">
-              <ul className="nav">
-                {footerNavItems.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className={item.isButton ? "btn white" : undefined}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <ul className="contact_group">
-                <li>
-                  <div className="icon">
+            <ul className="social_icons">
+              {socialLinks.map((social) => (
+                <li key={social.name}>
+                  <Link href={social.href} aria-label={social.name}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 24 24"
+                      width={20}
+                      height={20}
+                      viewBox={social.viewBox}
                     >
-                      <path
-                        fill="none"
-                        stroke="#fff"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"
-                      />
+                      <path fill="currentColor" d={social.path} />
                     </svg>
-                  </div>
-                  <Link href="tel:+91-0000 000 000">+91-0000 000 000</Link>
+                  </Link>
                 </li>
-                <li>
-                  <Link href="mailto:info@sjgroup.com">info@sjgroup.com</Link>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
-
-        <div className="lower-footer">
-          <div className="copywite">
-            <p>© SJ Group. All rights reserved.</p>
-            <p className="pret">
-              Made by passion
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.prettifycreative.com/"
-              >
-                <img
-                  src="/icon/prettify-light.svg"
-                  width={43}
-                  height={16}
-                  alt="prettify_logo"
-                />
-              </Link>
-            </p>
-          </div>
-
-          <ul className="social_icons">
-            {socialLinks.map((social) => (
-              <li key={social.name}>
-                <Link href={social.href} aria-label={social.name}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={20}
-                    height={20}
-                    viewBox={social.viewBox}
-                  >
-                    <path fill="currentColor" d={social.path} />
-                  </svg>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </footer>
+      </footer>
+      <Overlay />
+      <TeamPop />
+    </>
   );
 }

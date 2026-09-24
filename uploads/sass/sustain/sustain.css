@@ -1,0 +1,35 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.sustain_sec .main_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .sustain_sec .main_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sustain_sec .main_wrapper {
+    grid-gap: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .sustain_sec .main_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=sustain.css.map */

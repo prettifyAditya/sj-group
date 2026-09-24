@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import localFont from "next/font/local";
 import { Public_Sans } from "next/font/google";
 import MainTemplate from "@/components/frontendcomponent/templates/MainTemplate";
+import { ReduxProvider } from "@/store/provider";
 
 const publicSans = Public_Sans({
   subsets: ["latin"],
@@ -33,7 +34,9 @@ export default function RootLayout({
         className={`${publicSans.variable} ${ppTelegraf.variable}`}
         cz-shortcut-listen="true"
       >
-        <MainTemplate>{children}</MainTemplate>
+        <ReduxProvider>
+          <MainTemplate>{children}</MainTemplate>
+        </ReduxProvider>
       </body>
     </html>
   );

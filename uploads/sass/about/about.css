@@ -1,0 +1,220 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.banner.about_us_banner .banner-wrapper .heading {
+  max-width: 422px;
+}
+
+.about_description.banner::before {
+  background: linear-gradient(0deg, rgba(163, 163, 163, 0), #fff 70%);
+}
+.about_description.banner .bg {
+  height: 720px;
+}
+.about_description.banner .bg video {
+  -o-object-position: 0 5px;
+     object-position: 0 5px;
+}
+.about_description.banner .banner-wrapper {
+  top: 10%;
+  translate: 0 -10%;
+}
+.about_description.banner .banner-wrapper .heading {
+  max-width: 650px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+}
+.about_description.banner .banner-wrapper .heading .icon {
+  width: 51px;
+  height: 51px;
+  margin: 0 auto 20px;
+}
+.about_description.banner .banner-wrapper .heading h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--black);
+}
+.about_description.banner .banner-wrapper .heading .desc p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.our_values_sec .heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.our_values_sec .main_wrapper {
+  position: relative;
+}
+.our_values_sec .main_wrapper .value_slider {
+  max-width: 97%;
+}
+.our_values_sec .main_wrapper .value_slider .value_col {
+  border-radius: 10px;
+}
+.our_values_sec .main_wrapper .value_slider .value_col:hover .details {
+  transform: translateY(0);
+}
+.our_values_sec .main_wrapper .value_slider .value_col:hover figure img {
+  transform: scale(1.2);
+}
+.our_values_sec .main_wrapper .value_slider .value_col::before {
+  background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0) 50%);
+  border-radius: inherit;
+}
+.our_values_sec .main_wrapper .value_slider .value_col figure {
+  border-radius: inherit;
+}
+.our_values_sec .main_wrapper .value_slider .value_col figure img {
+  border-radius: inherit;
+}
+.our_values_sec .main_wrapper .value_slider .value_col figcaption {
+  padding: 0 30px 35px;
+}
+.our_values_sec .main_wrapper .value_slider .value_col figcaption h6 {
+  font-size: 20px;
+  font-family: var(--publicsans);
+  font-weight: 600;
+  color: var(--white);
+}
+.our_values_sec .main_wrapper .value_slider .value_col .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 55px 30px 35px;
+  transform: translateY(100%);
+  background: rgba(65, 65, 65, 0.4);
+  backdrop-filter: blur(50);
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+.our_values_sec .main_wrapper .value_slider .value_col .details h6 {
+  font-size: 20px;
+  font-family: var(--publicsans);
+  font-weight: 600;
+  color: var(--white);
+}
+.our_values_sec .main_wrapper .value_slider .value_col .details p {
+  margin: 15px 0 60px;
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+
+.about_milestone {
+  background: var(--gray);
+}
+
+.mission_vision {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mission_vision .bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+}
+.mission_vision .bg img {
+  opacity: 0.3;
+}
+.mission_vision .container {
+  position: relative;
+  z-index: 1;
+  --container: 820px;
+}
+.mission_vision .container .main_wrapper {
+  padding-bottom: 90px;
+  border-left: 1px solid var(--white);
+}
+.mission_vision .container .main_wrapper .vision_col, .mission_vision .container .main_wrapper .mission_col {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  --gap: 130px;
+  gap: var(--gap);
+  padding: 80px 0 0 80px;
+}
+.mission_vision .container .main_wrapper .vision_col::before, .mission_vision .container .main_wrapper .mission_col::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  top: 135px;
+  left: -10px;
+}
+.mission_vision .container .main_wrapper .vision_col figure, .mission_vision .container .main_wrapper .mission_col figure {
+  flex: 0 1 auto;
+  width: 100%;
+  line-height: 0;
+}
+.mission_vision .container .main_wrapper .vision_col figure img, .mission_vision .container .main_wrapper .mission_col figure img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.mission_vision .container .main_wrapper .vision_col figcaption, .mission_vision .container .main_wrapper .mission_col figcaption {
+  flex: 1;
+  width: 100%;
+  max-width: calc(100% - var(--gap));
+}
+.mission_vision .container .main_wrapper .vision_col figcaption h4, .mission_vision .container .main_wrapper .mission_col figcaption h4 {
+  font-size: 36px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.mission_vision .container .main_wrapper .vision_col figcaption .desc p, .mission_vision .container .main_wrapper .mission_col figcaption .desc p {
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+.mission_vision .container .main_wrapper .vision_col figcaption .desc p:not(:last-child), .mission_vision .container .main_wrapper .mission_col figcaption .desc p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.mission_vision .container .main_wrapper .vision_col figure {
+  max-width: 180px;
+  -webkit-mask-image: url("/images/about-us/vision-vector.svg");
+          mask-image: url("/images/about-us/vision-vector.svg");
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.mission_vision .container .main_wrapper .mission_col {
+  flex-direction: row-reverse;
+}
+.mission_vision .container .main_wrapper .mission_col figure {
+  max-width: 248px;
+  height: 248px;
+  -webkit-mask-image: url("/images/about-us/mission-vector.svg");
+          mask-image: url("/images/about-us/mission-vector.svg");
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.leadership_team .heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.leadership_team .main_wrapper {
+  position: relative;
+}
+.leadership_team .main_wrapper .team_slider {
+  max-width: 97%;
+}/*# sourceMappingURL=about.css.map */

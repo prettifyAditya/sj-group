@@ -1165,7 +1165,7 @@ button {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 7;
+  z-index: 11;
   background: var(--white);
   background-position: 0% 80%;
   background-size: 75%;
@@ -3210,27 +3210,26 @@ footer .lower-footer .social_icons li a {
   height: 20px;
 }
 
-.thankyou-banner.banner {
-  margin-top: var(--headerheight);
+.thankyou.banner::before {
+  background: linear-gradient(0deg, #000000, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0.631372549), rgba(0, 0, 0, 0));
 }
-.thankyou-banner.banner::before {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.6) 88%);
-}
-.thankyou-banner.banner .bg {
+.thankyou.banner .bg {
   height: calc(100vh - var(--headerheight));
 }
-.thankyou-banner.banner .banner-wrapper {
+.thankyou.banner .banner-wrapper {
   top: 60%;
   translate: 0 -60%;
 }
-.thankyou-banner.banner .banner-wrapper .content {
+.thankyou.banner .banner-wrapper .heading {
   max-width: 520px;
   text-align: center;
   margin: 0 auto;
 }
-.thankyou-banner.banner .banner-wrapper .content p {
+.thankyou.banner .banner-wrapper .heading p {
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.6980392157);
   font-size: 18px;
 }
-.thankyou-banner.banner .banner-wrapper .content .btn {
+.thankyou.banner .banner-wrapper .heading .btn {
   margin: 20px auto 0;
 }/*# sourceMappingURL=header.css.map */

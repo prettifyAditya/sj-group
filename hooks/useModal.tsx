@@ -1,11 +1,10 @@
-"use client";
+import { useDispatch } from "react-redux";
 import { setIsModal, setModalData } from "@/store/slice/modalSlice";
-import { useDispatch, useSelector } from "react-redux";
 
 export const useModal = () => {
   const dispatch = useDispatch();
 
-  const openModal = (type, data = null) => {
+  const openModal = <T = unknown,>(type: string, data: T | null = null) => {
     dispatch(setIsModal(type));
     dispatch(setModalData(data));
     document.body.classList.add("overflow-hidden");
