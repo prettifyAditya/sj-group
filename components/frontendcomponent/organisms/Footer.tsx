@@ -14,8 +14,7 @@ const footerNavItems: FooterNavItem[] = [
   { label: "Services", href: "/service-listing" },
   { label: "Projects", href: "/project-listing" },
   { label: "Blogs", href: "/blog-listing" },
-  { label: "Contact us", href: "/contact-us" },
-  { label: "Enquire Now", href: "/enquire", isButton: true },
+  { label: "Contact us", href: "/contact-us", isButton: true },
 ];
 
 interface SocialLink {
